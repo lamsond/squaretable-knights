@@ -16,6 +16,15 @@ class Student(models.Model):
     email = models.EmailField(max_length = 254)
     choice_one = models.ForeignKey(Major, on_delete=models.CASCADE)
 
+    STATUS_CHOICES = (
+            ('NS', 'Not Submitted'),
+            ('RV', 'Under Review'),
+            ('MI', 'Missing Information'),
+            ('AA', 'Applicant Accepted'),
+            ('AD', 'Applicant Declined'),
+            )
+
+    status = models.CharField(max_length=2, choices=STATUS_CHOICES, default='NS')
     def __str__(self):
         if self.middle_init != '':
             return self.first_name + " " + self.middle_init + ". " + self.last_name

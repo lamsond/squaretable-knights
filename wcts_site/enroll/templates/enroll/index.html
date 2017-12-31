@@ -1,0 +1,20 @@
+{% load static %}
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<h1>WCTS Application Portal</h1>
+		<img src="{% static "enroll/images/logo.png" %}" alt="logo"/>
+		<ul>
+			{% for option in options %}
+			{% if forloop.counter == 1 %}
+			<li><a href="apply/">{{ option }}</a></li>
+			{% else %}
+			<li><a href="enter_id/">{{ option }}</a></li>
+			{% endif %}
+			{% endfor %}
+		</ul>
+	</body>
+</html>
+
