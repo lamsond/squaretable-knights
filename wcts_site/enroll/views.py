@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 from .models import Student
+from .models import Major
 
 def index(request):
     context = {
@@ -15,7 +16,9 @@ def get_id(request):
     return HttpResponse("Enter student ID")
 
 def apply(request):
-    return HttpResponse("Create a new application")
+    #major_list = Major.objects
+    context = {}#{'major_list': major_list,}
+    return render(request, 'enroll/apply_static.html', context)
 
 def check_status(request, student_id):
     return HttpResponse("Check status of application")
