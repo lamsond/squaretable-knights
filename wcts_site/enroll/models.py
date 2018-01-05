@@ -4,6 +4,7 @@ from django.db import models
 class Major(models.Model):
     shop_name = models.CharField(max_length = 50)
     applicants = models.IntegerField(default = 0)
+    shop_code = models.CharField(max_length = 2, default='XX')
 
     def __str__(self):
         return self.shop_name
