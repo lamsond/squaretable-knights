@@ -3,6 +3,7 @@ from django.http import HttpResponse
 
 from .models import Student
 from .models import Major
+from .forms import EnrollmentForm
 
 def index(request):
     context = {
@@ -16,9 +17,8 @@ def get_id(request):
     return HttpResponse("Enter student ID")
 
 def apply(request):
-    #major_list = Major.objects
-    context = {}#{'major_list': major_list,}
-    return render(request, 'enroll/apply_static.html', context)
+    form = EnrollmentForm()
+    return render(request, 'enroll/apply_form.html', {'form':form})
 
 def check_status(request, student_id):
     return HttpResponse("Check status of application")

@@ -1,5 +1,7 @@
 from django.db import models
 
+
+
 #career majors
 class Major(models.Model):
     shop_name = models.CharField(max_length = 50)
@@ -15,7 +17,7 @@ class Student(models.Model):
     last_name = models.CharField(max_length = 100)
     middle_init = models.CharField(max_length = 1, blank=True)
     email = models.EmailField(max_length = 254)
-    choice_one = models.ForeignKey(Major, on_delete=models.CASCADE)
+    choices = models.ManyToManyField(Major)
 
     STATUS_CHOICES = (
             ('NS', 'Not Submitted'),
