@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+{% load static %} 
+<html>
+<head>
+	<title>Apply to WCTS</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'wcts_app/style.css' %}" />
+</head>
+<body>
+	<div id="header">
+		<h1 id = "title_color">Apply to WCTS</h1>
+		<img src="{% static "wcts_app/Logo_Trans.png" %}" alt="Knights Logo"/>
+	</div>
+	<div class="content">
+		<form method="POST">
+			{% csrf_token %}
+			<div class="student_info section">
+				<table>
+				<tr><td><h3 class="section_header">Student</h3></td></tr>
+				<div class="field_wrapper">
+					<tr>
+					{{ form.first_name.errors }}
+					<th>{{ form.first_name.label_tag }}</th>
+					<td>{{ form.first_name }}</td>
+					</tr>
+				</div>
+				<div class="field_wrapper optional">
+					<tr>
+					{{ form.middle_letter.errors }}
+					<th class="optional">{{ form.middle_letter.label_tag }}</th>
+					<td>{{ form.middle_letter }}</td>
+					</tr>
+				</div>
+				<div class="field_wrapper">
+					<tr>
+					{{ form.last_name.errors }}
+					<th>{{ form.last_name.label_tag }}</th>
+					<td>{{ form.last_name }}</td>
+					</tr>
+				</div>
+				<div class="field_wrapper">
+					<tr>
+					{{ form.birth_month.errors }}
+					<th><label>Birthdate: </label></th>
+					<td>{{ form.birth_month }}
+					{{ form.birth_date.errors }}
+					{{ form.birth_date }}
+					{{ form.birth_year.errors }}
+					{{ form.birth_year }}</td>
+					</tr>
+				</div>
+				<div class="field_wrapper">
+					<tr>
+					{{ form.mailing_address.errors }}
+					<th>{{ form.mailing_address.label_tag }}</th>
+					<td>{{ form.mailing_address }}</td>
+					</tr>
+				</div>
+				<div class="field_wrapper optional">
+					<tr>
+					{{ form.apartment_number.errors }}
+					<th class="optional">{{ form.apartment_number.label_tag }}</th>
+					<td>{{ form.apartment_number }}</td>
+					</tr>
+				</div>
+				<div class="field_wrapper">
+					<tr>
+					{{ form.city.errors }}
+					<th>{{ form.city.label_tag }}</th>
+					<td>{{ form.city }}</td>
+					</tr>
+				</div>
+				<div class="field_wrapper">
+					<tr>
+					{{ form.state.errors }}
+					<th>{{ form.state.label_tag }}</th>
+					<td>{{ form.state }}</td>
+					</tr>
+				</div>
+				<div class="field_wrapper">
+					<tr>
+					{{ form.zip_code.errors }}
+					<th>{{ form.zip_code.label_tag }}</th>
+					<td>{{ form.zip_code }}</td>
+					</tr>
+				</div>
+				<div class="field_wrapper">
+					<tr>
+					{{ form.student_home_phone.errors }}
+					<th>{{ form.student_home_phone.label_tag }}</th>
+					<td>1-(<input type="text" class="phone area" name="student_areacode" maxlength="3"/>)
+					- <input type="text" class="phone exchange" name="student_exchange" maxlength="3"/>
+					- <input type="text" class="pnone last_four" name="student_last_four" maxlength="4"/></td>
+					</tr>
+				</div>
+				<div class="field_wrapper">
+					<tr>
+					{{ form.township_municipality.errors }}
+					<th>{{ form.township_municipality.label_tag }}</th>
+					<td>{{ form.township_municipality }}</td>
+					</tr>
+				</div>
+				<!--</table>-->
+			</div>
+			<div class="parent_info section">
+				<tr><td><h3 class="section_header">Parent/Guardian</h3></td></tr>
+				<!--<table>-->
+				<div class="field_wrapper">
+					<tr>
+					{{ form.parent_name_1.errors }}
+					<th>{{ form.parent_name_1.label_tag }}</th>
+					<td>{{ form.parent_name_1 }}</td>
+					</tr>
+				</div>
+				<div class="field_wrapper">
+					<tr>
+					{{ form.parent_cell_1.errors }}
+					<th>{{ form.parent_cell_1.label_tag }}</th>
+					<td>1-(<input type="text" class="phone area" name="parent_areacode" maxlength="3"/>)
+					- <input type="text" class="phone exchange" name="parent_exchange" maxlength="3"/>
+					- <input type="text" class="pnone last_four" name="parent_last_four" maxlength="4"/></td>
+					</tr>
+				</div>
+				<div class="field_wrapper optional">
+					<tr>
+					{{ form.parent_work_1.errors }}
+					<th class="optional">{{ form.parent_work_1.label_tag }}</th>
+					<td>1-(<input type="text" class="phone area" name="parent_work_areacode" maxlength="3"/>)
+					- <input type="text" class="phone exchange" name="parent_work_exchange" maxlength="3"/>
+					- <input type="text" class="pnone last_four" name="parent_work_last_four" maxlength="4"/></td>
+					</tr>
+				</div>
+				<div class="field_wrapper">
+					<tr>
+					{{ form.parent_email_1.errors }}
+					<th class="optional">{{ form.parent_email_1.label_tag }}</th>
+					<td>{{ form.parent_email_1 }}</td>
+					</tr>
+				</div>
+				<!--</table>-->
+			</div>
+			<div class="school_info section">
+				<tr><td><h3 class="section_header">School</h3></td></tr>
+				<!--<table>-->
+				<div class="field_wrapper">
+					<tr>
+					{{ form.school_presently_attending.errors }}
+					<th>{{ form.school_presently_attending.label_tag }}</th>
+					<td>{{ form.school_presently_attending }}</td>
+					</tr>
+				</div>
+				<div class="field_wrapper">
+					<tr>
+					{{ form.guidance_counselor.errors }}
+					<th>{{ form.guidance_counselor.label_tag }}</th>
+					<td>{{ form.guidance_counselor }}</td>
+					</tr>
+				</div>
+				<div class="field_wrapper">
+					<tr>
+					{{ form.counselor_phone.errors }}
+					<th>{{ form.counselor_phone.label_tag }}</th>
+					<td>1-(<input type="text" class="phone area" name="counselor_areacode" maxlength="3"/>)
+					- <input type="text" class="phone exchange" name="counselor_exchange" maxlength="3"/>
+					- <input type="text" class="pnone last_four" name="counselor_last_four" maxlength="4"/></td>
+					</tr>
+				</div>
+				<!--</table>-->
+			</div>
+			<div class="major_info section">
+				<!--<table>-->
+				<tr><td><h3 class="section_header">Career Majors</h3></td></tr>
+				<div class="field_wrapper">
+					<tr>
+					{{ form.choice_1.errors }}
+					<th>{{ form.choice_1.label_tag }}</th>
+					<td>{{ form.choice_1}}</td>
+					</tr>
+				</div>
+				<div class="field_wrapper">
+					<tr>
+					{{ form.choice_2.errors }}
+					<th>{{ form.choice_2.label_tag }}</th>
+					<td>{{ form.choice_2}}</td>
+					</tr>
+				</div>
+				<div class="field_wrapper">
+					<tr>
+					{{ form.choice_3.errors }}
+					<th>{{ form.choice_3.label_tag }}</th>
+					<td>{{ form.choice_3}}</td>
+					</tr>
+				</div>
+				</table>
+			</div>
+			<input type="submit" value="Submit Application">
+		</form>
+	</div>
+	<div class="rectangle">
+		<div class="inner-rectangle">
+			<p> You should probably put stuff here.</p>
+		</div>
+	</div>
+</body>
+</html>
