@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %} 
+<html>
+<head>
+	<title>Apply to WCTS</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'wcts_app/style.css' %}" />
+</head>
+<body>
+	<div id="header">
+		<h1 id = "title_color">Apply to WCTS</h1>
+		<img src="{% static "wcts_app/Logo_Trans.png" %}" alt="Knights Logo"/>
+	</div>
+	<div class=content>
+		<form method="POST">
+			{% csrf_token %}
+			<table>
+				{{ form.as_table }}
+			</table>
+			<input type="submit" value="Submit Application">
+		</form>
+	</div>
+	<div class=rectangle>
+		<div class=inner-rectangle>
+			<p> You should probably put stuff here.</p>
+		</div>
+	</div>
+</body>
+</html>
