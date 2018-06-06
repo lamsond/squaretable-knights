@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %} 
+<html>
+<head>
+ <title>Apply to WCTS</title>
+ <link rel="stylesheet" type="text/css" href="{% static 'wcts_app/style.css' %}" />
+ <!-- google fonts from tech homepage -->
+ <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet">
+ 
+ <!-- google fonts from eric and rhi -->
+ <link href="https://fonts.googleapis.com/css?family=Bevan|Cabin|Cherry+Cream+Soda|Orbitron" rel="stylesheet">
+ 
+ <style>
+	 body{
+		 font-family: 'Open Sans';
+	 }
+	 .section_header{
+		 font-family: 'Oswald';
+	 }
+	 #title_color{
+		 font-family: 'Cherry Cream Soda';
+	 }
+	 .inner-rectangle-2{
+		 font-family: 'Orbitron'
+	 }
+	 /*
+	 label::before { 
+		content: url({% static "wcts_app/correct.png" %});
+		color: rgb(6, 22, 150);
+		font-size: 18px;
+		font-weight: bolder;
+	}*/
+
+ </style>
+</head>
+<body>
+ <div id="header">
+  <h1 id = "title_color">Apply to WCTS</h1>
+  <a href= "http://www.wctech.org/wcts/"><img class = logo src="{% static "wcts_app/bettertranslogo.png" %}" alt="Knights Logo"></a>
+ </div>
+ <div class="content">
+	<h1>Thank you {{ name }}, for applying to Warren County Technical School!</h1>
+    <h2>Your submission is now being reviewed</h2>
+    <img src= "http://www.wctech.org/wcts/2017FrontPics/2017pic1.jpg">
+     <a href = "http://www.wctech.org/wcts/"><img src= "http://www.wctech.org/wcts/images/2017logo.png" id = "Logo"></a>
+    <h1>Click on the logo to get to the school's homepage</h1>
+ </div>
+ <div class="rectangle">
+  <div class="inner-rectangle">
+   <p>Automotive Technology</p>
+   <p>Building Technology</p>
+   <p>Business Management</p>
+   <p>Child Development</p>
+   <p>Cinematography & Video Production</p>
+   <p>Computer Programming</p>
+   <p>Cosmetology</p>
+   <p>Electrician (Residential & Commercial)</p>
+   <p>Electronics Technology</p>
+   <p>General Engineering</p>
+   <p>Graphic Arts & Printing Management</p>
+   <p>Health Science</p>
+   <p>Hospitality & Culinary Arts</p>
+   <p>Law, Public Safety & Security</p>
+   <p>Welding & Metal Fabrication</p>
+  </div>
+ </div>
+ <div class="rectangle-2">
+  <div class="inner-rectangle-2">
+   <p> Application created by the Warren Tech Computer Programming class aka best class.</p>
+  </div>
+ </div>
+</body>
+</html>
+
+
+

@@ -51,16 +51,17 @@ MAJORS = (
  ("BT","Building Technology"),
  ("BM","Business Management"),
  ("CD","Child Development"),
- ("CVP","Cinematography Video Production"),
+ ("CVP","Cinematography & Video Production"),
  ("CP","Computer Programming"),
  ("C","Cosmetology"),
- ("ERC","Electrician Residential Commercial"),
+ ("ERC","Electrician (Residential & Commercial)"),
  ("ET","Electronics Technology"),
- ("GAPM","Graphic Arts Printing Management"),
+ ("GAPM","Graphic Arts & Printing Management"),
  ("GE","General Engineering"),
  ("HS","Health Science"),
- ("HMCA","Hospitality Management Culinary Arts"),
- ("LPSS","Law Public Safety Security"),
+ ("HMCA","Hospitality Management & Culinary Arts"),
+ ("LPSS","Law, Public & Safety Security"),
+ ("WMF","Welding & Metal Fabrication")
  )
 
 #middle school options compiled by Ally McDonald and Thomas Sperduto on 3/2/18

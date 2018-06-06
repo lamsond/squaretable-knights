@@ -1,0 +1,195 @@
+body{
+    /*background-color: #6589B7; #6589B7, 
+    background: linear-gradient(#A8BCFA, #BACDFB, #CBDEFC,#DCEFFD);*/
+    color: #000000;
+    font-family: Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+h1{
+	text-align: center;
+	font-size: 32px;
+}
+
+th{
+	text-align: right;
+	/*width: 200px;*/
+}
+
+td, th{
+	padding: 3px;
+	border-width: 0px;
+	border-style: solid;
+}
+
+table{
+	border-width: 0px;
+	border-color: #cccccc;
+	border-style: solid;
+	border-radius: 5px;
+}
+
+form{
+    border-width: 0px;
+    border-style: solid;
+    /*width: 550px;*/
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    /*background-color: #eeeeee;*/
+    border-radius: 0px;
+    color: rgb(6,22,150);
+    font-size: 18px;
+}
+
+input, select{
+	font-size: 18px;
+	border-radius: 5px;
+}
+
+label::before { 
+    content: "\2694      ";
+    color: rgb(6, 22, 150);
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.optional{
+    color: Gray;
+}
+
+.optional label::before{
+	content: "";
+}
+
+.Sword {
+	color: rgb(6,22,150);
+	font-size:24px;
+	font-weight: bolder;
+}
+
+.content {
+	width: 56.45%;
+	float: left;
+	padding: 10px;
+	height: 1500px;
+	border-width: 0px;
+	border-style: solid;
+	background-color:white;
+}
+
+.rectangle {
+	width: 40%;
+	float: left;
+	padding: 10px;
+	height: 1500px;
+	border-width: 0px;
+	border-style: solid;
+	background-color:white;
+}
+
+.inner-rectangle {
+	width: 30%px;
+	padding: 10px;
+	height: 1480px;
+	background-color:#1e215a;
+	border-radius: 15px;
+	color: white;
+	font-size: 48px;
+}
+
+.area, .exchange{
+	width: 35px;
+}
+
+.last_four{
+	width: 45px;
+}
+
+.section_header{
+	color: #6589B7;
+	font-size: 24px;
+	text-transform: uppercase;
+}
+
+#header {
+    background: linear-gradient(#030734, #080b3d, #0f0e48, #171553, #292271);
+    width: 100%;
+    padding: 0px;
+    margin-top: -20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#title_color {
+    color: #ffffff;
+    font-family:times;
+}
+
+#enter {
+    position:relative;
+    left:510px;
+}
+
+#id_middle_letter {
+    width:15px;
+}
+
+#id_birth_date {
+    width:38px;
+}
+
+#id_apartment_number {
+    width:40px;
+}
+
+#id_zip_code {
+    width:40px;
+}
+
+#id_student_home_phone {
+    width:90px;
+}
+
+#id_parent_cell_1 {
+    width:100px;
+}
+
+#id_parent_work_1 {
+    width:100px;
+}
+
+#id_parent_cell_2 {
+    width:100px;
+}
+
+#id_parent_work_2 {
+    width:100px;
+}
+
+#id_parent_2_apartment_number {
+    width:40px;
+}
+
+#id_parent_2_zip {
+    width:40px;
+}
+
+#id_counselor_phone {
+    width:90px;
+}
+
+#id_student_home_phone1 {
+     width:25px;
+}
+
+#id_student_home_phone2 {
+     width:25px;
+}
+
+#id_student_home_phone3 {
+     width:35px;
+}
+
+
